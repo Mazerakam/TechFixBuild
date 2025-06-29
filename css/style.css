@@ -1433,26 +1433,6 @@ function getServiceLabel(value) {
     opacity: 1;
     background: #0056b3;
 }
-/* Scrollbar personnalisée */
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #007bff, #0056b3);
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #0056b3, #004085);
-}
-
 /* Bouton retour en haut */
 .scroll-to-top {
     position: fixed;
