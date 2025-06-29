@@ -220,7 +220,7 @@ function addWelcomeMessage() {
       <p style="text-align: center; color: #667eea; font-weight: bold; margin-bottom: 15px;">
         ─ 🤖 Bienvenue chez TechFixBuild ─
       </p>
-      <p>Bonjour ! Je suis votre assistant virtuel. Comment puis-je vous aider aujourd'hui ?</p>
+      <p>👋 Bonjour ! Comment puis-je vous aider aujourd'hui ?</p>
       <div class="chat-buttons">
         <button onclick="askRepairType()">🛠️ Types de réparations</button>
         <button onclick="askPricing()">💵 Tarifs</button>
