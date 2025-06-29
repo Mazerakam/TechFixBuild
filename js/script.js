@@ -390,9 +390,9 @@ function backToMenu() {
       </p>
       <p>Comment puis-je vous aider ?</p>
       <div class="chat-buttons">
-        <button onclick="askRepairType()">Types de réparations</button>
-        <button onclick="askPricing()">Tarifs</button>
-        <button onclick="askContact()">Contact</button>
+        <button onclick="askRepairType()">🛠️ Types de réparations</button>
+        <button onclick="askPricing()">💵 Tarifs</button>
+        <button onclick="askContact()">✉️ Contact</button>
       </div>
     </div>
   `);
