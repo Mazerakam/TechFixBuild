@@ -40,6 +40,17 @@
 })();
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<!-- Ajoutez ceci temporairement dans votre page pour débugger -->
+<script>
+window.addEventListener('load', function() {
+  console.log('Page loaded, checking chatbot...');
+  setTimeout(function() {
+    if (typeof debugChatbot === 'function') {
+      debugChatbot();
+    }
+  }, 2000);
+});
+</script>
 </head>
 <body>
     <!-- Navigation -->
