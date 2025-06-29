@@ -1382,3 +1382,54 @@ function getServiceLabel(value) {
         service: getServiceLabel(serviceValue), // Transformation ici
         message: formData.get('message')
     };
+/* Styles pour la scrollbar principale */
+::-webkit-scrollbar {
+    width: 12px; /* Largeur de la scrollbar verticale */
+    height: 12px; /* Hauteur de la scrollbar horizontale */
+}
+
+/* Track (fond de la scrollbar) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Handle (partie mobile de la scrollbar) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* Handle au survol */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #0056b3, #004085);
+    transform: scale(1.05);
+}
+
+/* Coins de la scrollbar */
+::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+}
+/* Style minimaliste */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 3px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    opacity: 1;
+    background: #0056b3;
+}
