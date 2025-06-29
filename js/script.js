@@ -299,7 +299,10 @@ function handleUserMessage(message) {
 // Fonctions pour les différentes réponses
 function askRepairType() {
   addMessage(`
-    <p>Nous effectuons plusieurs types de réparations :</p>
+    <div class="menu-separator">
+      <p style="text-align: center; color: #667eea; font-weight: bold; margin-bottom: 15px;">
+        Nous effectuons plusieurs types de réparations :
+      </p>
     <div class="chat-buttons">
       <button onclick="showSmartphoneRepair()">📱 Smartphones</button>
       <button onclick="showComputerRepair()">💻 Ordinateurs</button>
