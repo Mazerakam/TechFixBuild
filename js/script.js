@@ -179,7 +179,56 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /// --------------------------------Fonctionnalités du chatbot -------------------------------------
+// Ajoutez ceci au début de votre fichier JavaScript
+(function() {
+  'use strict';
+  
+  // Attendre que le DOM soit complètement chargé
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeChatbot);
+  } else {
+    initializeChatbot();
+  }
+})();
 
+// Fonction d'initialisation du chatbot
+function initializeChatbot() {
+  console.log('Initializing chatbot...');
+  
+  // Vérifier que tous les éléments nécessaires existent
+  const chatbot = document.getElementById('chatbot');
+  const chatToggle = document.getElementById('chat-toggle');
+  const userInput = document.getElementById('user-input');
+  
+  if (!chatbot || !chatToggle || !userInput) {
+    console.error('Chatbot elements not found in DOM');
+    return;
+  }
+  
+  // Ajouter le message de bienvenue automatiquement
+  setTimeout(() => {
+    addWelcomeMessage();
+  }, 1000);
+  
+  console.log('Chatbot initialized successfully');
+}
+
+// Fonction pour ajouter le message de bienvenue
+function addWelcomeMessage() {
+  addMessage(`
+    <div class="menu-separator">
+      <p style="text-align: center; color: #667eea; font-weight: bold; margin-bottom: 15px;">
+        ── 🤖 Bienvenue chez TechFixBuild ──
+      </p>
+      <p>Bonjour ! Je suis votre assistant virtuel. Comment puis-je vous aider aujourd'hui ?</p>
+      <div class="chat-buttons">
+        <button onclick="askRepairType()">🛠️ Types de réparations</button>
+        <button onclick="askPricing()">💵 Tarifs</button>
+        <button onclick="askContact()">✉️ Contact</button>
+      </div>
+    </div>
+  `);
+}
 // Variables globales
 let chatOpen = false;
 
