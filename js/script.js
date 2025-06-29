@@ -94,8 +94,16 @@ function animateStats() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const target = parseInt(entry.target.getAttribute('data-target'));
-                animateCounter(entry.target, target);
+                const targetValue = entry.target.getAttribute('data-target');
+                const target = parseInt(targetValue);
+                
+                // Vérifier si la conversion en nombre a réussi
+                if (!isNaN(target) && target > 0) {
+                    animateCounter(entry.target, target);
+                } else {
+                    console.error('Impossible de convertir data-target en nombre:', targetValue);
+                }
+                
                 observer.unobserve(entry.target); // N'animer qu'une seule fois
             }
         });
@@ -109,6 +117,12 @@ function animateStats() {
 }
 
 function animateCounter(element, target) {
+    // Vérifier si target est un nombre valide
+    if (isNaN(target) || target <= 0) {
+        console.error('Valeur data-target invalide:', element.getAttribute('data-target'));
+        return;
+    }
+    
     let current = 0;
     const increment = target / 50; // Divise l'animation en 50 étapes
     const duration = 2000; // 2 secondes
