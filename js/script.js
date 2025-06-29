@@ -140,26 +140,40 @@ function animateCounter(element, target) {
     }, stepTime);
 }
 
-// Démarrer l'animation quand le DOM est chargé
-document.addEventListener('DOMContentLoaded', animateStats);
-// Bouton retour en haut
+// Attendre que le DOM soit chargé
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM chargé'); // Pour déboguer
+    
     const scrollToTopBtn = document.getElementById('scrollToTop');
     
-    // Afficher/masquer le bouton selon la position de scroll
-    window.addEventListener('scroll', function() {
+    if (!scrollToTopBtn) {
+        console.error('Bouton scroll-to-top non trouvé');
+        return;
+    }
+    
+    console.log('Bouton trouvé'); // Pour déboguer
+    
+    // Fonction pour afficher/masquer le bouton
+    function toggleScrollButton() {
         if (window.pageYOffset > 300) {
             scrollToTopBtn.classList.add('show');
         } else {
             scrollToTopBtn.classList.remove('show');
         }
-    });
+    }
     
-    // Action du bouton
+    // Écouter le scroll
+    window.addEventListener('scroll', toggleScrollButton);
+    
+    // Action du clic
     scrollToTopBtn.addEventListener('click', function() {
+        console.log('Bouton cliqué'); // Pour déboguer
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
     });
+    
+    // Vérifier immédiatement la position
+    toggleScrollButton();
 });
