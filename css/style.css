@@ -1506,6 +1506,27 @@ input, textarea, [contenteditable] {
 .disabled, [disabled] { 
     cursor: url('https://i.ibb.co/gbQMMMsd/2ec27ec6d6bc41cc8413fa14e0540d6a-0.png') 12 12, not-allowed !important; 
 }    
+/* Animations fluides pour les boutons */
+.btn {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Animation pour les cartes de services */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
 /* -------------------Fonctionnalités du chatbot--------------*/
 
 /* Styles du chatbot */
