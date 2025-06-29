@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous - TechFix & Build</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	  <!-- Favicon standard -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- PNG favicons pour différentes tailles -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png">
+    
+    <!-- Pour les appareils Apple -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    
+    <!-- Pour Android -->
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+	<a href="index.html" class="logo-link">
+    <img src="https://i.ibb.co/Xf1Sb7Wk/Capture-d-cran-2025-06-18-233919-removebg-preview-1.png" alt="TechFix&Build" class="logo-img">
+	</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="nos-services.html" class="nav-link">Nos Services</a></li>
+		<li><a href="a-propos.html" class="nav-link">À propos</a></li>
+
+                <li><a href="contactez-nous.html" class="nav-link active">Contactez-nous</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Nous sommes là pour résoudre votre problème ou répondre à toutes vos questions</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h2 style="margin-bottom: 2rem; color: var(--dark-gray);">Envoyez-nous un message</h2>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="surname">Prénom *</label>
+                            <input type="text" id="surname" name="surname" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <label for="service">Service demandé</label>
+                            <select id="service" name="service">
+                                <option value="">Sélectionnez un service</option>		
+                                <option value="🛠️ Réparation Smartphone">🛠️ Réparation Smartphone</option>								
+				<option value="💻 Diagnostic d'ordinateur">💻 Diagnostic d'ordinateur</option>
+                                <option value="🖥️ Construction d'ordinateur sur-mesure">🖥️ Construction d'ordinateur sur-mesure</option>								
+                                <option value="🔧 Micro-soudure">🔧 Micro-soudure à effectuer</option>
+                                <option value="❓ Autre type de réparation">❓ Autre type de réparation</option>
+                                <option value="❓ Autre demande">❓ Autre demande</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" id="submit-btn" style="width: 100%;">
+                            <span id="btn-text">
+                                <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                                Envoyer le message
+                            </span>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Nos Coordonnées</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+						<h4>Horaires</h4>
+                            <p>Lundi - Vendredi : 9h00 - 22h00<br>Samedi - Dimanche : 9h00 - 13h00</p>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-headset"></i>
+                        <div>
+                         <h4>Support 24/7</h4>
+                            <p>Nous vous répondrons dès réception de votre message</p>   
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+						<h4>Email</h4>
+                            <p>contact@techfixbuild.fr</p>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+						<h4>Téléphone (SMS)</h4>
+                            <p>+33 7 57 84 56 77</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="services-preview">
+        <div class="container">
+            <h2 class="section-title">Questions Fréquentes</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon" style="background: var(--light-blue); color: var(--primary-blue);">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <h3>Délais de réponse</h3>
+                    <p>Nous répondons à tous les messages sous 24h ouvrées maximum</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="background: var(--light-blue); color: var(--primary-blue);">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <h3>Devis gratuit</h3>
+                    <p>Tous nos devis sont gratuits et sans engagement de votre part</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="background: var(--light-blue); color: var(--primary-blue);">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Consultation</h3>
+                    <p>Sur place ou en visio, pour évaluer la demande et établir votre devis gratuit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pop-up de confirmation -->
+    <div id="popup-overlay" class="popup-overlay">
+        <div class="popup">
+            <div class="popup-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>✅ Message envoyé avec succès !</h3>
+            <p>Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.</p>
+            <button class="popup-close" onclick="closePopup()">
+                <i class="fas fa-times" style="margin-right: 8px;"></i>
+                Fermer
+            </button>
+        </div>
+    </div>
+
+    <!-- Pop-up d'erreur -->
+    <div id="error-popup-overlay" class="popup-overlay">
+        <div class="popup error-popup">
+            <div class="popup-icon error">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h3>❌ Erreur lors de l'envoi</h3>
+            <p>Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer ou nous contacter directement par mail contact@techfixbuild.fr.</p>
+            <button class="popup-close" onclick="closeErrorPopup()">
+                <i class="fas fa-times" style="margin-right: 8px;"></i>
+                Fermer
+            </button>
+        </div>
+    </div>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+				<a href="index.html" class="footer-logo-link">
+                    <img src="https://i.ibb.co/Xf1Sb7Wk/Capture-d-cran-2025-06-18-233919-removebg-preview-1.png" alt="TechFix&Build" class="footer-logo">
+					</a>
+                    <p>Solutions technologiques innovantes pour un avenir connecté</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/TechFixandBuild" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">A propos</a></li>
+                        <li><a href="services.html">Nos services</a></li>
+                        <li><a href="contact.html">Nous contacter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact@techfixbuild.fr</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Champagne-Ardenne, France</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechFix&Build. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    
+    <!-- Script EmailJS et Pop-up -->
+    <script>
+        // Configuration EmailJS
+        emailjs.init("iUDULbS_n_vQV0HJw");
+
+        // Fonctions pour les pop-ups
+        function showPopup() {
+            document.getElementById('popup-overlay').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup-overlay').style.display = 'none';
+        }
+
+        function showErrorPopup() {
+            document.getElementById('error-popup-overlay').style.display = 'flex';
+        }
+
+        function closeErrorPopup() {
+            document.getElementById('error-popup-overlay').style.display = 'none';
+        }
+
+        // Fermer les pop-ups en cliquant sur l'overlay
+        document.getElementById('popup-overlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePopup();
+            }
+        });
+
+        document.getElementById('error-popup-overlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeErrorPopup();
+            }
+        });
+
+        // Gestion du formulaire
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            
+            // Changer l'état du bouton pendant l'envoi
+            submitBtn.disabled = true;
+            btnText.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 0.5rem;"></i>Envoi en cours...';
+            
+            // Envoyer le formulaire via EmailJS
+            emailjs.sendForm('service_v9ed2hs', 'template_54zllot', this)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    showPopup();
+                    document.getElementById('contact-form').reset();
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    showErrorPopup();
+                })
+                .finally(function() {
+                    // Remettre le bouton à l'état normal
+                    submitBtn.disabled = false;
+                    btnText.innerHTML = '<i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>Envoyer le message';
+                });
+        });
+    </script>
+</body>
+</html>

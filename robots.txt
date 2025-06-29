@@ -1,0 +1,70 @@
+# Robots.txt pour TechFixBuild.fr
+# Généré le 09/01/2025
+
+# Permettre à tous les robots d'indexer le site
+User-agent: *
+Allow: /
+
+# Interdire l'accès aux dossiers techniques et fichiers sensibles
+Disallow: /admin/
+Disallow: /config/
+Disallow: /includes/
+Disallow: /scripts/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /logs/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /vendor/
+
+# Interdire l'accès aux fichiers de configuration
+Disallow: /*.ini$
+Disallow: /*.conf$
+Disallow: /*.config$
+Disallow: /*.log$
+Disallow: /*.sql$
+Disallow: /*.bak$
+
+# Interdire l'accès aux fichiers cachés
+Disallow: /.*
+
+# Permettre l'accès aux fichiers CSS, JS et images pour un meilleur rendu
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+
+# Règles spécifiques pour les principaux moteurs de recherche
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Bloquer les bots indésirables (optionnel)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap
+Sitemap: https://techfixbuild.fr/sitemap.xml
+
+# Délai entre les requêtes (optionnel, en secondes)
+Crawl-delay: 1
