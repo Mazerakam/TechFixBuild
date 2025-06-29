@@ -177,6 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Vérifier immédiatement la position
     toggleScrollButton();
 });
+
 /// --------------------------------Fonctionnalités du chatbot -------------------------------------
 
 // Variables globales
@@ -236,7 +237,7 @@ function handleUserMessage(message) {
     askContact();
   } else {
     addMessage(`
-      <p>Je ne suis pas sûr de comprendre. Voici ce que je peux vous aider :</p>
+      <p>Je ne suis pas sûr de comprendre. Voici comment je peux vous aider :</p>
       <div class="chat-buttons">
         <button onclick="askRepairType()">🛠️ Types de réparations</button>
         <button onclick="askPricing()">💵 Tarifs</button>
@@ -262,7 +263,10 @@ function askRepairType() {
 
 function showSmartphoneRepair() {
   addMessage(`
-    <p><strong>Réparations Smartphones :</strong></p>
+    <div class="menu-separator">
+      <p style="text-align: center; color: #667eea; font-weight: bold; margin-bottom: 15px;">
+        ─ 📱 Réparations Smartphones ─
+      </p>
     <p>• Écran cassé/fissuré<br>
     • Batterie défaillante<br>
     • Problèmes de charge<br>
@@ -278,7 +282,10 @@ function showSmartphoneRepair() {
 
 function showComputerRepair() {
   addMessage(`
-    <p><strong>Réparations Ordinateurs :</strong></p>
+    <div class="menu-separator">
+      <p style="text-align: center; color: #667eea; font-weight: bold; margin-bottom: 15px;">
+        ── 💻 Réparations Ordinateurs ──
+      </p>
     <p>• Diagnostic et dépannage<br>
     • Remplacement composants<br>
     • Nettoyage virus/malware<br>
@@ -294,7 +301,10 @@ function showComputerRepair() {
 
 function showTabletRepair() {
   addMessage(`
-    <p><strong>Réparations Tablettes :</strong></p>
+    <div class="menu-separator">
+      <p style="text-align: center; color: #667eea; font-weight: bold; margin-bottom: 15px;">
+        ── 📟 Réparations Tablettes ──
+      </p>
     <p>• Écran tactile défaillant<br>
     • Problèmes de charge<br>
     • Boutons défectueux<br>
@@ -310,7 +320,10 @@ function showTabletRepair() {
 
 function showConsoleRepair() {
   addMessage(`
-    <p><strong>Réparations Consoles :</strong></p>
+    <div class="menu-separator">
+      <p style="text-align: center; color: #667eea; font-weight: bold; margin-bottom: 15px;">
+        ── 🎮 Réparations Consoles ──
+      </p>
     <p>• PlayStation, Xbox, Nintendo<br>
     • Problèmes de lecture<br>
     • Surchauffe/ventilation<br>
@@ -326,7 +339,10 @@ function showConsoleRepair() {
 
 function askPricing() {
   addMessage(`
-    <p><strong>Nos tarifs :</strong></p>
+    <div class="menu-separator">
+      <p style="text-align: center; color: #667eea; font-weight: bold; margin-bottom: 15px;">
+        ──── 💵 Nos tarifs ────
+      </p>
     <p>📱 <strong>Smartphones :</strong><br>
     • Diagnostic : Gratuit<br>
     • Écran : 50-150€<br>
@@ -344,13 +360,16 @@ function askPricing() {
 
 function askContact() {
   addMessage(`
-    <p><strong>Contactez-nous :</strong></p>
+    <div class="menu-separator">
+      <p style="text-align: center; color: #667eea; font-weight: bold; margin-bottom: 15px;">
+        ──── ✉️ Contactez-nous ────
+      </p>
     <p>📧 <strong>Email :</strong> contact@techfixbuild.fr</p>
     <p>🕐 <strong>Horaires :</strong><br>
     Lun-Ven : 9h-22h<br>
     Sam-Dim : 9h-13h</p>
     <div class="chat-buttons">
-      <button onclick="window.open('mailto:contact@techfixbuild.fr')">✉️ Email</button>
+      <button onclick="window.open('mailto:contact@techfixbuild.fr')">✉️ Envoyez un mail</button>
       <button onclick="backToMenu()">◀️ Menu principal</button>
     </div>
   `);
