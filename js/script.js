@@ -219,7 +219,7 @@ function addWelcomeMessage() {
   addMessage(`
     <div class="menu-separator">
       <p style="text-align: center; color: #667eea; font-weight: bold; margin-bottom: 15px;">
-        ──── 🤖 Bienvenue chez TechFixBuild ────
+        ── 🤖 Bienvenue chez TechFixBuild ──
       </p>
       <p>Bonjour ! Je suis votre assistant virtuel. Comment puis-je vous aider aujourd'hui ?</p>
       <div class="chat-buttons">
@@ -310,7 +310,19 @@ function sendMessage() {
     console.error('Error sending message:', error);
   }
 }
-
+// Fonction de debug
+window.debugChatbot = function() {
+  console.log('=== TECHFIXBUILD CHATBOT DEBUG ===');
+  console.log('DOM ready:', document.readyState);
+  console.log('Elements present:', {
+    chatbot: !!document.getElementById('chatbot'),
+    toggle: !!document.getElementById('chat-toggle'),
+    messages: !!document.getElementById('chat-messages'),
+    input: !!document.getElementById('user-input')
+  });
+  console.log('Chat state:', chatOpen);
+  console.log('==================================');
+};
 // Gestion des messages utilisateur
 function handleUserMessage(message) {
   const lowerMessage = message.toLowerCase();
