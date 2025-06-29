@@ -177,3 +177,228 @@ document.addEventListener('DOMContentLoaded', function() {
     // Vérifier immédiatement la position
     toggleScrollButton();
 });
+/// --------------------------------Fonctionnalités du chatbot -------------------------------------
+
+// Variables globales
+let chatOpen = false;
+
+// Fonction pour ouvrir/fermer le chat
+function toggleChat() {
+  const chatbot = document.getElementById('chatbot');
+  const chatToggle = document.getElementById('chat-toggle');
+  
+  chatOpen = !chatOpen;
+  
+  if (chatOpen) {
+    chatbot.classList.remove('chat-hidden');
+    chatToggle.style.display = 'none';
+  } else {
+    chatbot.classList.add('chat-hidden');
+    chatToggle.style.display = 'flex';
+  }
+}
+
+// Fonction pour ajouter un message
+function addMessage(message, isUser = false) {
+  const chatMessages = document.getElementById('chat-messages');
+  const messageDiv = document.createElement('div');
+  messageDiv.className = isUser ? 'user-message' : 'bot-message';
+  messageDiv.innerHTML = message;
+  chatMessages.appendChild(messageDiv);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+// Fonction pour envoyer un message utilisateur
+function sendMessage() {
+  const userInput = document.getElementById('user-input');
+  const message = userInput.value.trim();
+  
+  if (message) {
+    addMessage(`<p>${message}</p>`, true);
+    userInput.value = '';
+    
+    // Simuler une réponse du bot
+    setTimeout(() => {
+      handleUserMessage(message);
+    }, 1000);
+  }
+}
+
+// Gestion des messages utilisateur
+function handleUserMessage(message) {
+  const lowerMessage = message.toLowerCase();
+  
+  if (lowerMessage.includes('prix') || lowerMessage.includes('tarif') || lowerMessage.includes('coût')) {
+    askPricing();
+  } else if (lowerMessage.includes('réparation') || lowerMessage.includes('service')) {
+    askRepairType();
+  } else if (lowerMessage.includes('contact') || lowerMessage.includes('téléphone')) {
+    askContact();
+  } else {
+    addMessage(`
+      <p>Je ne suis pas sûr de comprendre. Voici ce que je peux vous aider :</p>
+      <div class="chat-buttons">
+        <button onclick="askRepairType()">🛠️ Types de réparations</button>
+        <button onclick="askPricing()">💵 Tarifs</button>
+        <button onclick="askContact()">✉️ Contact</button>
+      </div>
+    `);
+  }
+}
+
+// Fonctions pour les différentes réponses
+function askRepairType() {
+  addMessage(`
+    <p>Nous effectuons plusieurs types de réparations :</p>
+    <div class="chat-buttons">
+      <button onclick="showSmartphoneRepair()">📱 Smartphones</button>
+      <button onclick="showComputerRepair()">💻 Ordinateurs</button>
+      <button onclick="showTabletRepair()">📟 Tablettes</button>
+      <button onclick="showConsoleRepair()">🎮 Consoles</button>
+      <button onclick="backToMenu()">◀️ Retour au menu</button>
+    </div>
+  `);
+}
+
+function showSmartphoneRepair() {
+  addMessage(`
+    <p><strong>Réparations Smartphones :</strong></p>
+    <p>• Écran cassé/fissuré<br>
+    • Batterie défaillante<br>
+    • Problèmes de charge<br>
+    • Caméra/micro/haut-parleur<br>
+    • iCloud verrouillé</p>
+    <div class="chat-buttons">
+      <button onclick="askPricing()">💵 Voir les tarifs</button>
+      <button onclick="askContact()">✉️ Prendre RDV</button>
+      <button onclick="backToMenu()">◀️ Menu principal</button>
+    </div>
+  `);
+}
+
+function showComputerRepair() {
+  addMessage(`
+    <p><strong>Réparations Ordinateurs :</strong></p>
+    <p>• Diagnostic et dépannage<br>
+    • Remplacement composants<br>
+    • Nettoyage virus/malware<br>
+    • Installation OS/logiciels<br>
+    • Récupération de mot de passe ou de données</p>
+    <div class="chat-buttons">
+      <button onclick="askPricing()">💵 Voir les tarifs</button>
+      <button onclick="askContact()">✉️ Prendre RDV</button>
+      <button onclick="backToMenu()">◀️ Menu principal</button>
+    </div>
+  `);
+}
+
+function showTabletRepair() {
+  addMessage(`
+    <p><strong>Réparations Tablettes :</strong></p>
+    <p>• Écran tactile défaillant<br>
+    • Problèmes de charge<br>
+    • Boutons défectueux<br>
+    • Problèmes software<br>
+    • Connectique endommagée</p>
+    <div class="chat-buttons">
+      <button onclick="askPricing()">💵 Voir les tarifs</button>
+      <button onclick="askContact()">✉️ Prendre RDV</button>
+      <button onclick="backToMenu()">◀️ Menu principal</button>
+    </div>
+  `);
+}
+
+function showConsoleRepair() {
+  addMessage(`
+    <p><strong>Réparations Consoles :</strong></p>
+    <p>• PlayStation, Xbox, Nintendo<br>
+    • Problèmes de lecture<br>
+    • Surchauffe/ventilation<br>
+    • Manettes défectueuses<br>
+    • Connectique HDMI</p>
+    <div class="chat-buttons">
+      <button onclick="askPricing()">💵 Voir les tarifs</button>
+      <button onclick="askContact()">✉️ Prendre RDV</button>
+      <button onclick="backToMenu()">◀️ Menu principal</button>
+    </div>
+  `);
+}
+
+function askPricing() {
+  addMessage(`
+    <p><strong>Nos tarifs :</strong></p>
+    <p>📱 <strong>Smartphones :</strong><br>
+    • Diagnostic : Gratuit<br>
+    • Écran : 50-150€<br>
+    • Batterie : 30-80€</p>
+    <p>💻 <strong>Ordinateurs :</strong><br>
+    • Diagnostic : Gratuit<br>
+    • Nettoyage : 40€<br>
+    • Réparation : 60-250€</p>
+    <div class="chat-buttons">
+      <button onclick="askContact()">✉️ Demander un devis</button>
+      <button onclick="backToMenu()">◀️ Menu principal</button>
+    </div>
+  `);
+}
+
+function askContact() {
+  addMessage(`
+    <p><strong>Contactez-nous :</strong></p>
+    <p>📧 <strong>Email :</strong> contact@techfixbuild.fr</p>
+    <p>🕐 <strong>Horaires :</strong><br>
+    Lun-Ven : 9h-22h<br>
+    Sam-Dim : 9h-13h</p>
+    <div class="chat-buttons">
+      <button onclick="window.open('mailto:contact@techfixbuild.fr')">✉️ Email</button>
+      <button onclick="backToMenu()">◀️ Menu principal</button>
+    </div>
+  `);
+}
+
+function backToMenu() {
+  addMessage(`
+    <p>Comment puis-je vous aider ?</p>
+    <div class="chat-buttons">
+      <button onclick="askRepairType()">🛠️ Types de réparations</button>
+      <button onclick="askPricing()">💵 Tarifs</button>
+      <button onclick="askContact()">✉️ Contact</button>
+    </div>
+  `);
+}
+
+// Gestion de la touche Entrée
+document.addEventListener('DOMContentLoaded', function() {
+  const userInput = document.getElementById('user-input');
+  if (userInput) {
+    userInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+  }
+});
+// Fonction complète avec scroll et séparation
+function backToMenu() {
+  const chatMessages = document.getElementById('chat-messages');
+  
+  // Ajouter le message avec séparation
+  addMessage(`
+    <div class="menu-separator">
+      <p style="text-align: center; color: #667eea; font-weight: bold; margin-bottom: 15px;">
+        ──── 🏠 Menu Principal ────
+      </p>
+      <p>Comment puis-je vous aider ?</p>
+      <div class="chat-buttons">
+        <button onclick="askRepairType()">Types de réparations</button>
+        <button onclick="askPricing()">Tarifs</button>
+        <button onclick="askContact()">Contact</button>
+      </div>
+    </div>
+  `);
+  
+  // Scroll automatique vers le bas après un court délai
+  setTimeout(() => {
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }, 100);
+}
