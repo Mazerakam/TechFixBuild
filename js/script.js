@@ -87,3 +87,44 @@ window.addEventListener('scroll', () => {
         navbar.style.background = 'rgba(255, 255, 255, 0.95)';
     }
 });
+// Animation des statistiques au scroll
+function animateStats() {
+    const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = parseInt(entry.target.getAttribute('data-target'));
+                animateCounter(entry.target, target);
+                observer.unobserve(entry.target); // N'animer qu'une seule fois
+            }
+        });
+    }, {
+        threshold: 0.5 // Déclenche quand 50% de l'élément est visible
+    });
+
+    statNumbers.forEach(stat => {
+        observer.observe(stat);
+    });
+}
+
+function animateCounter(element, target) {
+    let current = 0;
+    const increment = target / 50; // Divise l'animation en 50 étapes
+    const duration = 2000; // 2 secondes
+    const stepTime = duration / 50;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        
+        if (current >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current);
+        }
+    }, stepTime);
+}
+
+// Démarrer l'animation quand le DOM est chargé
+document.addEventListener('DOMContentLoaded', animateStats);
