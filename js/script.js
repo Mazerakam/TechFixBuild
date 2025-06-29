@@ -179,11 +179,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /// --------------------------------Fonctionnalités du chatbot -------------------------------------
-// Ajoutez ceci au début de votre fichier JavaScript
+// Variables globales
+let chatOpen = false;
+
+// Initialisation automatique
 (function() {
   'use strict';
   
-  // Attendre que le DOM soit complètement chargé
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializeChatbot);
   } else {
@@ -191,34 +193,33 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 
-// Fonction d'initialisation du chatbot
 function initializeChatbot() {
-  console.log('Initializing chatbot...');
+  console.log('TechFixBuild Chatbot: Initializing...');
   
-  // Vérifier que tous les éléments nécessaires existent
-  const chatbot = document.getElementById('chatbot');
-  const chatToggle = document.getElementById('chat-toggle');
-  const userInput = document.getElementById('user-input');
+  // Vérifier la présence des éléments
+  const requiredElements = ['chatbot', 'chat-toggle', 'chat-messages', 'user-input'];
+  const missingElements = requiredElements.filter(id => !document.getElementById(id));
   
-  if (!chatbot || !chatToggle || !userInput) {
-    console.error('Chatbot elements not found in DOM');
+  if (missingElements.length > 0) {
+    console.error('TechFixBuild Chatbot: Missing elements:', missingElements);
     return;
   }
   
-  // Ajouter le message de bienvenue automatiquement
+  // Ajouter le message de bienvenue après un délai
   setTimeout(() => {
-    addWelcomeMessage();
-  }, 1000);
+    if (document.getElementById('chat-messages').children.length === 0) {
+      addWelcomeMessage();
+    }
+  }, 1500);
   
-  console.log('Chatbot initialized successfully');
+  console.log('TechFixBuild Chatbot: Initialized successfully');
 }
 
-// Fonction pour ajouter le message de bienvenue
 function addWelcomeMessage() {
   addMessage(`
     <div class="menu-separator">
       <p style="text-align: center; color: #667eea; font-weight: bold; margin-bottom: 15px;">
-        ── 🤖 Bienvenue chez TechFixBuild ──
+        ──── 🤖 Bienvenue chez TechFixBuild ────
       </p>
       <p>Bonjour ! Je suis votre assistant virtuel. Comment puis-je vous aider aujourd'hui ?</p>
       <div class="chat-buttons">
@@ -229,48 +230,84 @@ function addWelcomeMessage() {
     </div>
   `);
 }
-// Variables globales
-let chatOpen = false;
 
 // Fonction pour ouvrir/fermer le chat
 function toggleChat() {
-  const chatbot = document.getElementById('chatbot');
-  const chatToggle = document.getElementById('chat-toggle');
-  
-  chatOpen = !chatOpen;
-  
-  if (chatOpen) {
-    chatbot.classList.remove('chat-hidden');
-    chatToggle.style.display = 'none';
-  } else {
-    chatbot.classList.add('chat-hidden');
-    chatToggle.style.display = 'flex';
+  try {
+    const chatbot = document.getElementById('chatbot');
+    const chatToggle = document.getElementById('chat-toggle');
+    
+    if (!chatbot || !chatToggle) {
+      console.error('Chat elements not found for toggle');
+      return;
+    }
+    
+    chatOpen = !chatOpen;
+    
+    if (chatOpen) {
+      chatbot.classList.remove('chat-hidden');
+      chatToggle.style.display = 'none';
+    } else {
+      chatbot.classList.add('chat-hidden');
+      chatToggle.style.display = 'flex';
+    }
+  } catch (error) {
+    console.error('Error toggling chat:', error);
   }
 }
 
 // Fonction pour ajouter un message
 function addMessage(message, isUser = false) {
-  const chatMessages = document.getElementById('chat-messages');
-  const messageDiv = document.createElement('div');
-  messageDiv.className = isUser ? 'user-message' : 'bot-message';
-  messageDiv.innerHTML = message;
-  chatMessages.appendChild(messageDiv);
-  chatMessages.scrollTop = chatMessages.scrollHeight;
+  try {
+    const chatMessages = document.getElementById('chat-messages');
+    
+    if (!chatMessages) {
+      console.error('Chat messages container not found');
+      return;
+    }
+    
+    const messageDiv = document.createElement('div');
+    messageDiv.className = isUser ? 'user-message' : 'bot-message';
+    messageDiv.innerHTML = message;
+    
+    chatMessages.appendChild(messageDiv);
+    
+    // Scroll fluide vers le bas
+    setTimeout(() => {
+      chatMessages.scrollTo({
+        top: chatMessages.scrollHeight,
+        behavior: 'smooth'
+      });
+    }, 100);
+    
+  } catch (error) {
+    console.error('Error adding message:', error);
+  }
 }
 
 // Fonction pour envoyer un message utilisateur
 function sendMessage() {
-  const userInput = document.getElementById('user-input');
-  const message = userInput.value.trim();
-  
-  if (message) {
-    addMessage(`<p>${message}</p>`, true);
-    userInput.value = '';
+  try {
+    const userInput = document.getElementById('user-input');
     
-    // Simuler une réponse du bot
-    setTimeout(() => {
-      handleUserMessage(message);
-    }, 1000);
+    if (!userInput) {
+      console.error('User input element not found');
+      return;
+    }
+    
+    const message = userInput.value.trim();
+    
+    if (message) {
+      addMessage(`<p>${message}</p>`, true);
+      userInput.value = '';
+      
+      // Simuler une réponse du bot
+      setTimeout(() => {
+        handleUserMessage(message);
+      }, 1000);
+    }
+  } catch (error) {
+    console.error('Error sending message:', error);
   }
 }
 
