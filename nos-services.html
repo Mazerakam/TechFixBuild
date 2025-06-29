@@ -19,6 +19,25 @@
     
     <!-- Pour Android -->
     <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+	<script>
+// Supprimer .html de l'URL et des liens
+(function() {
+    // Nettoyer l'URL actuelle
+    if (location.pathname.endsWith('.html')&&location.pathname !== '/index.html') {
+        history.replaceState(null, null, location.pathname.replace('.html', ''));
+    }
+    
+    // Nettoyer tous les liens au chargement
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href$=".html"]').forEach(function(link) {
+            const href = link.getAttribute('href');
+            if (!href.startsWith('http')&&!href.startsWith('#')) {
+                link.setAttribute('href', href === 'index.html' ? '/' : href.replace('.html', ''));
+            }
+        });
+    });
+})();
+</script>
 </head>
 <body>
     <!-- Navigation -->
