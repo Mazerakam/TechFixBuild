@@ -473,7 +473,7 @@ function askPricing() {
       • Nettoyage : 40€<br>
       • Réparation : 60-250€</p>
       <div class="chat-buttons">
-        <button type="button" onclick="window.location.href='https://www.techfixbuild.fr/contactez-nous'; return false;">✉️ Demander un devis</button>
+        <button type="button" onclick="window.location.href='https://www.techfixbuild.fr/contactez-nous'; return false;">✉️ Prendre RDV</button>
         <button type="button" onclick="backToMenu(); return false;">◀️ Menu principal</button>
       </div>
     </div>
