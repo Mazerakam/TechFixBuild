@@ -1747,3 +1747,40 @@ input, textarea, [contenteditable] {
   height: 25px;
   background: linear-gradient(to bottom, transparent 0%, #f8f9fa 100%);
 }
+/* CSS pour le livechat */
+.livechat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.livechat-bubble {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* Assurez-vous que le bouton soit visible sur mobile */
+}
+
+.livechat-window {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    max-width: calc(100vw - 40px);
+    max-height: calc(100vh - 120px);
+    z-index: 10000;
+}
+
+/* Media queries pour mobile */
+@media (max-width: 768px) {
+    .livechat-window {
+        width: calc(100vw - 20px);
+        height: calc(100vh - 100px);
+        bottom: 80px;
+        right: 10px;
+        left: 10px;
+    }
+}
