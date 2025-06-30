@@ -230,7 +230,7 @@ function addWelcomeMessage() {
   addMessage(`
     <div class="menu-separator">
       <p style="text-align: center; color: #667eea; font-weight: bold; margin-bottom: 15px;">
-        ─ 🤖 Bienvenue chez TechFix&Build ─
+        ─ 🤖 Bienvenue chez TechFixBuild ─
       </p>
       <p>👋 Bonjour ! Comment puis-je vous aider aujourd'hui ?</p>
       <div class="chat-buttons">
@@ -535,37 +535,6 @@ document.addEventListener('DOMContentLoaded', function() {
         sendMessage();
       }
     });
-  }
-  
-  // Ajouter un bouton de fermeture pour mobile
-  const chatbot = document.getElementById('chatbot');
-  if (chatbot&&isMobileDevice()) {
-    // Ajouter un bouton de fermeture visible
-    const closeButton = document.createElement('button');
-    closeButton.innerHTML = '✕';
-    closeButton.style.cssText = `
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: #ff4757;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      font-size: 16px;
-      cursor: pointer;
-      z-index: 10001;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    `;
-    closeButton.onclick = function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      toggleChat();
-    };
-    chatbot.appendChild(closeButton);
   }
   
   // Améliorer la gestion des clics sur les boutons du chat
