@@ -335,7 +335,14 @@
         <path d="M7 14L12 9L17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
 </button>
-	  <!-- Interface du chatbot -->
+	<!-- Ajoutez cette section dans votre HTML, juste avant la fermeture du body -->
+<div id="chatbot-container">
+  <!-- Bouton flottant pour ouvrir le chat -->
+  <div id="chat-toggle" onclick="toggleChat()">
+    <i class="fas fa-comments"></i>
+  </div>
+  
+  <!-- Interface du chatbot -->
   <div id="chatbot" class="chat-hidden">
     <div class="chat-header">
       <h4>Assistant TechFix & Build</h4>
@@ -359,6 +366,5 @@
     </div>
   </div>
 </div>
-</body>
-	
+</body>	
 </html>
