@@ -1180,9 +1180,9 @@ body {
 }
 
 .nav-logo .logo-img {
-    height: 60px;
+    height: 50px;
     width: auto;
-    max-width: 300px;
+    max-width: 250px;
     object-fit: contain;
     display: block;
     outline: none; /* Supprime le contour sur l'image */
