@@ -230,7 +230,7 @@ function addWelcomeMessage() {
   addMessage(`
     <div class="menu-separator">
       <p style="text-align: center; color: #667eea; font-weight: bold; margin-bottom: 15px;">
-        ─ 🤖 Bienvenue chez TechFixBuild ─
+        ─ 🤖 Bienvenue chez TechFix&Build ─
       </p>
       <p>👋 Bonjour ! Comment puis-je vous aider aujourd'hui ?</p>
       <div class="chat-buttons">
