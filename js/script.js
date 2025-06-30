@@ -391,7 +391,7 @@ function showSmartphoneRepair() {
       • iCloud verrouillé</p>
       <div class="chat-buttons">
         <button type="button" onclick="askPricing(); return false;">💵 Voir les tarifs</button>
-        <button type="button" onclick="askContact(); return false;">✉️ Prendre RDV</button>
+        <button type="button" onclick="window.location.href='https://www.techfixbuild.fr/contactez-nous'; return false;">✉️ Prendre RDV</button>
         <button type="button" onclick="backToMenu(); return false;">◀️ Menu principal</button>
       </div>
     </div>
@@ -411,7 +411,7 @@ function showComputerRepair() {
       • Récupération de mot de passe ou de données</p>
       <div class="chat-buttons">
         <button type="button" onclick="askPricing(); return false;">💵 Voir les tarifs</button>
-        <button type="button" onclick="askContact(); return false;">✉️ Prendre RDV</button>
+        <button type="button" onclick="window.location.href='https://www.techfixbuild.fr/contactez-nous'; return false;">✉️ Prendre RDV</button>
         <button type="button" onclick="backToMenu(); return false;">◀️ Menu principal</button>
       </div>
     </div>
@@ -431,7 +431,7 @@ function showTabletRepair() {
       • Connectique endommagée</p>
       <div class="chat-buttons">
         <button type="button" onclick="askPricing(); return false;">💵 Voir les tarifs</button>
-        <button type="button" onclick="askContact(); return false;">✉️ Prendre RDV</button>
+        <button type="button" onclick="window.location.href='https://www.techfixbuild.fr/contactez-nous'; return false;">✉️ Prendre RDV</button>
         <button type="button" onclick="backToMenu(); return false;">◀️ Menu principal</button>
       </div>
     </div>
@@ -451,7 +451,7 @@ function showConsoleRepair() {
       • Connectique HDMI</p>
       <div class="chat-buttons">
         <button type="button" onclick="askPricing(); return false;">💵 Voir les tarifs</button>
-        <button type="button" onclick="askContact(); return false;">✉️ Prendre RDV</button>
+        <button type="button" onclick="window.location.href='https://www.techfixbuild.fr/contactez-nous'; return false;">✉️ Prendre RDV</button>
         <button type="button" onclick="backToMenu(); return false;">◀️ Menu principal</button>
       </div>
     </div>
@@ -473,7 +473,7 @@ function askPricing() {
       • Nettoyage : 40€<br>
       • Réparation : 60-250€</p>
       <div class="chat-buttons">
-        <button type="button" onclick="askContact(); return false;">✉️ Demander un devis</button>
+        <button type="button" onclick="window.location.href='https://www.techfixbuild.fr/contactez-nous'; return false;">✉️ Demander un devis</button>
         <button type="button" onclick="backToMenu(); return false;">◀️ Menu principal</button>
       </div>
     </div>
@@ -491,7 +491,7 @@ function askContact() {
       Lun-Ven : 9h-22h<br>
       Sam-Dim : 9h-13h</p>
       <div class="chat-buttons">
-        <button type="button" onclick="window.open('mailto:contact@techfixbuild.fr'); return false;">✉️ Envoyez un mail</button>
+        <button type="button" onclick="window.location.href='https://www.techfixbuild.fr/contactez-nous'; return false;">✉️ Accèder au formulaire</button>
         <button type="button" onclick="backToMenu(); return false;">◀️ Menu principal</button>
       </div>
     </div>
