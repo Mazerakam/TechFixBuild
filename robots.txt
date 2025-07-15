@@ -1,11 +1,12 @@
-# Robots.txt pour TechFixBuild.fr
-# Généré le 09/01/2025
+# Robots.txt pour TechFixBuild.fr - Réparation électronique Ardennes
+# Généré le 09/01/2025 - Optimisé SEO local
 
-# Permettre à tous les robots d'indexer le site
+# Permettre à tous les robots d'indexer le site principal
 User-agent: *
 Allow: /
 
-# Interdire l'accès aux dossiers techniques et fichiers sensibles
+# === INTERDICTIONS TECHNIQUES ===
+# Dossiers système et configuration
 Disallow: /admin/
 Disallow: /config/
 Disallow: /includes/
@@ -17,19 +18,27 @@ Disallow: /logs/
 Disallow: /.git/
 Disallow: /node_modules/
 Disallow: /vendor/
+Disallow: /cache/
+Disallow: /private/
 
-# Interdire l'accès aux fichiers de configuration
+# Fichiers sensibles
 Disallow: /*.ini$
 Disallow: /*.conf$
 Disallow: /*.config$
 Disallow: /*.log$
 Disallow: /*.sql$
 Disallow: /*.bak$
+Disallow: /*.env$
+Disallow: /*.htaccess$
+Disallow: /*.htpasswd$
 
-# Interdire l'accès aux fichiers cachés
+# Fichiers cachés et temporaires
 Disallow: /.*
+Disallow: /*~$
+Disallow: /*.tmp$
 
-# Permettre l'accès aux fichiers CSS, JS et images pour un meilleur rendu
+# === AUTORISATIONS SPÉCIFIQUES ===
+# Ressources essentielles pour le SEO
 Allow: /*.css$
 Allow: /*.js$
 Allow: /*.png$
@@ -42,18 +51,39 @@ Allow: /*.ico$
 Allow: /*.woff$
 Allow: /*.woff2$
 Allow: /*.ttf$
+Allow: /*.pdf$
 
-# Règles spécifiques pour les principaux moteurs de recherche
+# Pages importantes pour le SEO local
+Allow: /services/
+Allow: /contact/
+Allow: /tarifs/
+Allow: /galerie/
+Allow: /avis/
+Allow: /blog/
+
+# === RÈGLES SPÉCIFIQUES MOTEURS DE RECHERCHE ===
+# Google - Priorité maximale
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /photos/
+Allow: /galerie/
+
+# Bing - Important pour les recherches locales
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
+# Yahoo
 User-agent: Slurp
 Allow: /
+Crawl-delay: 2
 
-# Bloquer les bots indésirables (optionnel)
+# === BOTS INDÉSIRABLES - BLOCAGE ===
+# Bots de scraping agressifs
 User-agent: AhrefsBot
 Disallow: /
 
@@ -63,8 +93,37 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-# Sitemap
-Sitemap: https://techfixbuild.fr/sitemap.xml
+User-agent: SemrushBot
+Disallow: /
 
-# Délai entre les requêtes (optionnel, en secondes)
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Bots malveillants
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: spbot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# === SITEMAPS ===
+# Sitemap principal
+Sitemap: https://www.techfixbuild.fr/sitemap.xml
+
+# Sitemaps spécialisés (à créer)
+Sitemap: https://www.techfixbuild.fr/sitemap-images.xml
+Sitemap: https://www.techfixbuild.fr/sitemap-services.xml
+Sitemap: https://www.techfixbuild.fr/sitemap-blog.xml
+
+# === PARAMÈTRES CRAWL ===
+# Délai entre requêtes (performance serveur)
 Crawl-delay: 1
+
+# Host canonical (important pour éviter contenu dupliqué)
+Host: https://www.techfixbuild.fr
