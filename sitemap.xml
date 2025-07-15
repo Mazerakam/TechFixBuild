@@ -20,63 +20,28 @@
         <priority>0.9</priority>
     </url>
 
-    <!-- À Propos -->
+    <!-- Portofolio -->
+    <url>
+        <loc>https://techfixbuild.fr/portofolio</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- A propos -->
     <url>
         <loc>https://techfixbuild.fr/a-propos</loc>
         <lastmod>2025-01-09</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
-
-    <!-- Contact -->
+        
+    <!-- Contactez-nous -->
     <url>
         <loc>https://techfixbuild.fr/contactez-nous</loc>
         <lastmod>2025-01-09</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Services spécifiques (si vous avez des pages dédiées) -->
-    <url>
-        <loc>https://techfixbuild.fr/reparation-ordinateur</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://techfixbuild.fr/reparation-smartphone</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://techfixbuild.fr/reparation-tablette</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://techfixbuild.fr/installation-logiciel</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://techfixbuild.fr/depannage-domicile</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://techfixbuild.fr/formation-informatique</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.6</priority>
     </url>
 
     <!-- Pages légales -->
