@@ -4,127 +4,191 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-    <!-- Page d'accueil -->
+    <!-- ===== PAGES PRINCIPALES (BUSINESS CRITICAL) ===== -->
+    
+    <!-- Page d'accueil - Priorité maximale -->
     <url>
-        <loc>https://techfixbuild.fr/</loc>
+        <loc>https://www.techfixbuild.fr/</loc>
         <lastmod>2025-01-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
-    <!-- Nos Services -->
+    <!-- Services - Page la plus importante pour le SEO local -->
     <url>
-        <loc>https://techfixbuild.fr/nos-services</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <!-- Portofolio -->
-    <url>
-        <loc>https://techfixbuild.fr/portofolio</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- A propos -->
-    <url>
-        <loc>https://techfixbuild.fr/a-propos</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-        
-    <!-- Contactez-nous -->
-    <url>
-        <loc>https://techfixbuild.fr/contactez-nous</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <!-- Pages légales -->
-    <url>
-        <loc>https://techfixbuild.fr/mentions-legales</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-
-    <url>
-        <loc>https://techfixbuild.fr/politique-confidentialite</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-
-    <url>
-        <loc>https://techfixbuild.fr/conditions-generales</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-
-    <!-- Pages informatives -->
-    <url>
-        <loc>https://techfixbuild.fr/tarifs</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://techfixbuild.fr/zone-intervention</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://techfixbuild.fr/urgence-informatique</loc>
-        <lastmod>2025-01-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <!-- Blog/Actualités (si vous en avez) -->
-    <url>
-        <loc>https://techfixbuild.fr/blog</loc>
+        <loc>https://www.techfixbuild.fr/nos-services</loc>
         <lastmod>2025-01-09</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.95</priority>
     </url>
 
+    <!-- Contact - Essentiel pour le SEO local -->
     <url>
-        <loc>https://techfixbuild.fr/conseils-informatique</loc>
+        <loc>https://www.techfixbuild.fr/contactez-nous</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Zone d'intervention - Crucial pour "Ardennes" -->
+    <url>
+        <loc>https://www.techfixbuild.fr/zone-intervention</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <!-- Devis gratuit - Conversion importante -->
+    <url>
+        <loc>https://www.techfixbuild.fr/devis-gratuit</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- ===== PAGES BUSINESS IMPORTANTES ===== -->
+    
+    <!-- Portofolio - Preuves sociales -->
+    <url>
+        <loc>https://www.techfixbuild.fr/portofolio</loc>
         <lastmod>2025-01-09</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.75</priority>
+    </url>
+
+    <!-- Tarifs - Important pour la conversion -->
+    <url>
+        <loc>https://www.techfixbuild.fr/nos-tarifs</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+
+    <!-- Témoignages - Confiance et SEO local -->
+    <url>
+        <loc>https://www.techfixbuild.fr/temoignages</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.65</priority>
+    </url>
+
+    <!-- Urgence informatique - Différenciateur -->
+    <url>
+        <loc>https://www.techfixbuild.fr/urgence-informatique</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
+
+    <!-- ===== PAGES SERVICES SPÉCIFIQUES (NOUVELLES) ===== -->
+    
+    <!-- Réparation téléphone - Mot-clé principal -->
+    <url>
+        <loc>https://www.techfixbuild.fr/reparation-telephone-ardennes</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Réparation ordinateur -->
+    <url>
+        <loc>https://www.techfixbuild.fr/reparation-ordinateur-charleville</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <!-- Réparation console -->
+    <url>
+        <loc>https://www.techfixbuild.fr/reparation-console-jeux</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- ===== PAGES GÉOLOCALISÉES ===== -->
+    
+    <!-- Charleville-Mézières - Ville principale -->
+    <url>
+        <loc>https://www.techfixbuild.fr/reparation-charleville-mezieres</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <!-- Sedan - Ville importante Ardennes -->
+    <url>
+        <loc>https://www.techfixbuild.fr/reparation-sedan-ardennes</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+
+    <!-- Rethel - Couverture géographique -->
+    <url>
+        <loc>https://www.techfixbuild.fr/reparation-rethel</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
+
+    <!-- ===== CONTENU ET BLOG ===== -->
+    
+    <!-- Blog principal -->
+    <url>
+        <loc>https://www.techfixbuild.fr/blog</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.60</priority>
+    </url>
+
+    <!-- Conseils informatique -->
+    <url>
+        <loc>https://www.techfixbuild.fr/conseils-informatique</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.60</priority>
     </url>
 
     <!-- FAQ -->
     <url>
-        <loc>https://techfixbuild.fr/faq</loc>
+        <loc>https://www.techfixbuild.fr/faq</loc>
         <lastmod>2025-01-09</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.55</priority>
     </url>
 
-    <!-- Témoignages/Avis -->
+    <!-- ===== PAGES INFORMATIVES ===== -->
+    
+    <!-- À propos -->
     <url>
-        <loc>https://techfixbuild.fr/temoignages</loc>
+        <loc>https://www.techfixbuild.fr/a-propos</loc>
         <lastmod>2025-01-09</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.50</priority>
     </url>
 
-    <!-- Devis en ligne -->
+    <!-- ===== PAGES LÉGALES ===== -->
+    
     <url>
-        <loc>https://techfixbuild.fr/devis-gratuit</loc>
+        <loc>https://www.techfixbuild.fr/mentions-legales</loc>
         <lastmod>2025-01-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <changefreq>yearly</changefreq>
+        <priority>0.20</priority>
+    </url>
+
+    <url>
+        <loc>https://www.techfixbuild.fr/politique-confidentialite</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.20</priority>
+    </url>
+
+    <url>
+        <loc>https://www.techfixbuild.fr/conditions-generales</loc>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.20</priority>
     </url>
 
 </urlset>
