@@ -33,7 +33,6 @@ Disallow: /*.htaccess$
 Disallow: /*.htpasswd$
 
 # Fichiers cachés et temporaires
-Disallow: /.*
 Disallow: /*~$
 Disallow: /*.tmp$
 
@@ -127,3 +126,4 @@ Crawl-delay: 1
 
 # Host canonical (important pour éviter contenu dupliqué)
 Host: https://www.techfixbuild.fr
+
